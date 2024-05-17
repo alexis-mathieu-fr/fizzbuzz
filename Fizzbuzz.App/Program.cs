@@ -6,11 +6,12 @@ public static class FizzBuzzClass
     {
     }
 
-    public static string TestFunction(int input)
-    {
-        if (input % 3 == 0 && input % 5 != 0) return "Fizz";
-        if (input == 5) return "Buzz";
-        if (input == 15) return "FizzBuzz";
-        return input.ToString();
-    }
+    public static string TestFunction(int input) =>
+        input switch
+        {
+            _ when input % 15 == 0 => "FizzBuzz",
+            _ when input % 3 == 0 => "Fizz",
+            _ when input % 5 == 0 => "Buzz",
+            _ => input.ToString()
+        };
 }
