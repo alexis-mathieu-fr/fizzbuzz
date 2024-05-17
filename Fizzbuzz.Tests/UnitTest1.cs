@@ -12,6 +12,8 @@ public class UnitTest1
     [InlineData(15, "FizzBuzz")]
     [InlineData(6, "Fizz")]
     [InlineData(9, "Fizz")]
+    [InlineData(10, "Buzz")]
+    [InlineData(30, "FizzBuzz")]
     public void IfInputThenShouldMatchExpected(int input, string expected)
     {
         var result = FizzBuzzClass.TestFunction(input);
